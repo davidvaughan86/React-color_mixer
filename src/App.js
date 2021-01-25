@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useState} from 'react'
+import ColorPicker from './colorpicker'
 
 
 
@@ -19,27 +20,21 @@ const appStyle ={
 
   return (
     <div className="appStyle" style ={appStyle} >
-      <input type ="range" mix="0" max="255" value={red} 
-      onChange={(event) => {
-        console.log(event.target.value);
-        setRed(event.target.value);
-      }}
-      />
-      {red}
+      <ColorPicker 
+      label ="red:"
+      color={red}
+      setColor={setRed}/>
+
       <br />
-      <input type ="range" mix="0" max="255" value={green} 
-      onChange={(event) => {
-        setGreen(event.target.value);
-      }}
-      />
-      {green}
+      <ColorPicker 
+      label = "green:"
+      color={green}
+      setColor={setGreen}/>
       <br />
-      <input type ="range" mix="0" max="255" value={blue}
-      onChange={(event) => {
-        setBlue(event.target.value)
-      }} 
-      />
-      {blue}
+      <ColorPicker 
+      label = "blue:"
+      color={blue}
+      setColor={setBlue}/>
       
     </div>
   );
