@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, {useState} from 'react'
-import ColorPicker from './Colorpicker'
+import ColorPicker from './colorpicker'
 import FakeDiv from './Fakediv'
 import Header from './Header'
 import Footer from './Footer'
@@ -28,14 +28,14 @@ const appStyle ={
     <Header/>
       
     <Footer />
-      
+    <h2>{red},{green},{blue}</h2>
       <div className="container">
         
         <FakeDiv 
                 className="appStyle" 
                 style ={appStyle} 
               />
-                <h2>{red},{green},{blue}</h2>
+                
       
               
       </div>
