@@ -6,7 +6,7 @@ export default function Footer () {
          
             <h3>Slide the RGB scales to see different color mix options</h3>
             
-            
+            <p>Created by David Vaughan Jan '21</p>
    
         </div>
         

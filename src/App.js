@@ -5,7 +5,7 @@ import ColorPicker from './Colorpicker'
 import FakeDiv from './Fakediv'
 import Header from './Header'
 import Footer from './Footer'
-
+import mixer from './pngegg.png'
 
 
 
@@ -30,10 +30,17 @@ const appStyle ={
     <Footer />
       
       <div className="container">
+        
         <FakeDiv 
                 className="appStyle" 
                 style ={appStyle} 
-              >
+              />
+                <h2>{red},{green},{blue}</h2>
+      
+              
+      </div>
+              
+      <div className="container2">
           
           <ColorPicker 
           label ="red:"
@@ -50,10 +57,10 @@ const appStyle ={
           label = "blue:"
           color={blue}
           setColor={setBlue}/>
-          
-        </FakeDiv>
+      </div>   
+        
 
-      </div>
+      
       
     </div>
   );

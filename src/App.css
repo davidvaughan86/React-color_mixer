@@ -2,12 +2,12 @@
   
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr .1fr 1fr ;
   grid-template-rows: 1fr 1fr 1fr ;
   grid-template-areas: 
   
   'header header header'
-  'color color color'
+  'color null color3'
   'footer footer footer'
   
   
@@ -19,7 +19,7 @@ html, body, #root {
   padding: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(yellow, red);
+  background: linear-gradient(#a799b7,#fdca40,#fb3640,#542e71);
   font-family: 'Coda Caption', sans-serif;
 }
 
@@ -27,32 +27,78 @@ html, body, #root {
   padding: 10%;
   border: 2px solid white;
   border-radius: 10px;
+  height: 50%;
   
+
+}
+
+.container h2{
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   grid-area: color;
   padding:5%;
-  
-  
-  
+  justify-self: center;
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: linear-gradient(#a799b7,#fdca40,#fb3640,#542e71);
+  box-shadow: 5px 5px 5px;
 }
 
+
+.container2 {
+  grid-area: color3;
+  display: flex;
+  flex-direction: column;
+  padding:5%;
+  justify-self: center;
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: linear-gradient(#a799b7,#fdca40,#fb3640,#542e71);
+  box-shadow: 5px 5px 5px;
+}
 .footer { 
   grid-area: footer;
-  display: flex;
-  margin-left: 10%;
+  text-align: center;
   
-  
-  
+
 }
 
+.footer h3 {
+  background: linear-gradient(white, crimson);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+}
 
+.footer p {
+  background: linear-gradient(silver, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 15px;
+}
 
 .header {
   grid-area: header;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
+.header h1 {
+  justify-content: center;
+  display: flex;
+  background: linear-gradient(#a799b7,#fdca40,#fb3640,#542e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+}
 
+.header img {
+  display: flex;
+  align-self: center;
+}
